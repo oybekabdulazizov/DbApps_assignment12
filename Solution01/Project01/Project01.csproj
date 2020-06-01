@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200601114504_InitialCreation.cs" />
+    <Compile Remove="Migrations\20200601114504_InitialCreation.Designer.cs" />
     <Compile Remove="Migrations\20200601130036_addingFourRecords.cs" />
     <Compile Remove="Migrations\20200601130036_addingFourRecords.Designer.cs" />
   </ItemGroup>
@@ -17,6 +19,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Project01.Migrations
+namespace MvcMovie.Migrations
 {
-    public partial class InitialCreation : Migration
+    public partial class initialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,7 +11,7 @@ namespace Project01.Migrations
                 name: "Movie",
                 columns: table => new
                 {
-                    IdMovie = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(nullable: true),
                     ReleaseDate = table.Column<DateTime>(nullable: false),
@@ -20,7 +20,7 @@ namespace Project01.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Movie", x => x.IdMovie);
+                    table.PrimaryKey("PK_Movie", x => x.Id);
                 });
         }
 
